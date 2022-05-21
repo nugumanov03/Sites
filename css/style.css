@@ -1,0 +1,363 @@
+body {
+    margin: 0;
+
+
+    font-size: 35px;
+    line-height: 1.6;
+    font-family: 'Supermercado One', cursive;
+    
+}
+
+/* @font-face {
+	font-family: 'Supermercado One', cursive;
+	src: url("../SupermercadoOne-Regular.ttf");
+	/* src: url("../SupermercadoOne-Regular.ttf") format("embedded-opentype"),
+			 url("../SupermercadoOne-Regular.ttf") format("woff"),
+			 url("../SupermercadoOne-Regular.ttf") format("truetype"); */
+	/* font-style: normal;
+	font-weight: normal;
+}  */
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+h1 ,h2 , h3, h4 , h5 , h6{
+    margin: 0;
+}
+
+a{
+    color: aquamarine;
+}
+
+.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    } 
+
+/* Верстка Шапки  */
+.header{
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+    width: 100%;  
+
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    }.header::after{
+        content: "";
+        display: block;
+    
+    
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_logo{
+    font-size: 30px;
+    font-size: 1000;
+    color: rgb(14, 13, 13);
+    
+}  
+
+.nav{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav_link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    z-index: 1;
+
+    color: rgb(39, 1, 1);
+    text-decoration: none;
+    transition: color .1s linear;
+}
+.nav_link:hover{
+    z-index: 2;
+    color: rgb(134, 65, 65);
+    transition: color .1s linear;
+}
+.nav_link:hover:after{
+    opacity: 1;
+}
+.nav_link:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .1 linear;
+
+    background-color: rgb(22, 155, 82);
+    position: absolute;
+}
+
+/* Конец Шапки  */
+
+/* First section : intro  */
+
+.intro_inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.intro_title{
+    text-shadow: 3px 3px rgba(255, 166, 0, 0.486);
+}
+
+.whButton{
+    padding-top: 20px;
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-bottom: 20px;
+    border-radius: 30px;
+    color: rgba(3, 3, 3, 0.726);
+    /* box-shadow: 0 15px 40px rgba(255, 160, 45, 0.5); */
+    margin-top: 20px;
+}.whButton:hover{
+    background-color: rgb(161, 158, 158);
+    color: black;
+}
+/* Second section : img Text  */
+
+.aboutUs{
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.imgText{
+    display: flex;
+    flex-direction: row;
+}
+.TextLogo{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    }.TextLogointo p{
+        font-size: 15px;
+        font-weight: 500;
+    }.TextLogointo h2{
+        font-size: 20px;
+        text-align: left;
+    }
+.image2{
+     flex:4
+}
+
+/* Section 2 ends */
+
+/* section 3 starts */
+
+.sliderBox{
+    display: flex;
+    flex-direction: row;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.buttons{
+    flex:1
+}
+
+.buttons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.buttonsSlider{
+    display: flex;
+    margin:0 auto;
+    padding: 10px 20px;
+    border: 2px solid black;
+}
+
+.slider{
+    flex:4;
+    display: flex;
+    flex-direction: row;
+}
+
+.slides{
+    display: none;
+    flex: 1;
+    border: 2px solid red;
+    margin: 4px;
+}
+#a1{
+    background-color: blue ;
+}
+#a2{
+    background-color: rgb(255, 0, 0) ;
+}
+#a3{
+    background-color: rgb(0, 255, 42) ;
+}
+#a4{
+    background-color: rgb(255, 0, 234);
+}
+
+
+.show{
+    display: block;
+}
+
+.dotsCont{
+    display: flex;
+    flex-direction: row;
+    padding-left: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.dotsSlider{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 7px;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.active{
+    background-color: rgb(252, 0, 0);
+}
+
+
+.orangebackground{
+    background-color: burlywood;
+}
+
+
+/* SLIDER ENDS */
+
+/* Good Background opacity  */
+.imgbackground{
+    width: 100%;
+    max-width: 1800px;
+    height: 100%;
+    z-index: 100;
+    opacity: 0.5;
+    margin: 0 auto;
+}
+
+
+.backgroundscroll{
+    width: 100%;
+    max-width: 1800px;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    border: 5px solid slateblue;
+    position: absolute;
+    top: 0;
+    text-shadow: 1px 2px black;
+}
+
+.backgroundscroll1 {
+    background-image: url(../fon\ try.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    margin-bottom: 200px;
+    padding-bottom: 200px;
+    z-index: 1;
+
+}.backgroundscroll1::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(65, 63, 63, 0.445);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.index{
+    z-index: 2;
+}
+
+
+     
+/* End for background */
+
+
+/* Backgroun video */
+.myVideoContainer{
+    max-width: 1800px;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;}
+    .myVideoContainer:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+    
+        background-color: rgba(65, 63, 63, 0.445);
+    
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .myVideo{
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        margin: 0 auto;
+    }
+
+
+
+/* Footer start  */
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content:space-between;
+    margin-left: 200px;
+    margin-right: 100px;
+    padding-top: 70px;
+    font-size: 15px;
+    padding-bottom: 70px;
+}
